@@ -64,7 +64,7 @@ public class PersonController {
     }
 
     @PutMapping
-    public ArrayList<PersonDTO> updatePerson(@PathVariable int id, @RequestBody PersonDTO updatedPerson) {
+    public ArrayList<PersonDTO> updatePerson(@RequestParam int id, @RequestBody PersonDTO updatedPerson) {
         for (int i = 0; i < persons.size(); i++) {
             PersonDTO personDto = persons.get(i);
             if (personDto.getId() == id) {
